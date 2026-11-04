@@ -9,6 +9,11 @@ jobs:
 
     steps:
       - name: Hello Step
-        run: |
-          echo "This is line one"
-          echo "This is line two"
+        run: echo "A demo build"
+
+  test:
+   runs-on: ubuntu-latest
+   needs: hello
+   steps:
+     - name: test phase
+       run: echo "A demo build second"
